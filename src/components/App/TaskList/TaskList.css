@@ -1,0 +1,9 @@
+.no-tasks {
+	margin: 3rem auto;
+	font-size: 2rem;
+}
+.task-list {
+	margin: 2rem auto;
+	max-width: 40rem;
+	text-align: left;
+}
