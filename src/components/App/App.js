@@ -14,12 +14,17 @@ const App = () => {
 		const newTasks = [...tasks, { id, text, completed: false }];
 		setTasks(newTasks);
 	}
+	
+	const removeTask = index => {
+		const newTasks = [...tasks].filter(task => task.id !== index);
+		setTasks(newTasks);
+	}
 
   return (
     <div>
 			<h1>TO-DO REACT APP</h1>
 			<TaskInput addTaskFn={addTask} />
-      <TaskList taskListArr={tasks} />
+      <TaskList taskListArr={tasks} removeTaskFn={removeTask} />
     </div>
   )
 }

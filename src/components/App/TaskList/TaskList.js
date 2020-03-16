@@ -15,8 +15,9 @@ const TaskList = props => {
 				{props.taskListArr.map( (taskObject) => (
 					<Task
 						key={taskObject.id}
-						taskText={taskObject.text}
 						id={taskObject.id}
+						taskText={taskObject.text}
+						removeTask={props.removeTaskFn}
 					/>
 				))}
 			</div>
