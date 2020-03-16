@@ -16,6 +16,9 @@
 .task-text {
 	flex-grow: 1;
 }
+.task-completed {
+	text-decoration: line-through;
+}
 .task-remove-button {
 	width: 2.5rem;
 	height: 2.5rem;

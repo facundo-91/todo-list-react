@@ -4,8 +4,15 @@ import './Task.css';
 const Task = props => {
 	return (
 		<div className='task-wrapper'>
-			<input type='checkbox' className='task-checkbox'></input>
-			<p className='task-text'>{props.taskText}</p>
+			<input
+				type='checkbox'
+				className='task-checkbox'
+				onChange={() => props.completeTask(props.id)}>
+			</input>
+			<p
+				className={props.taskCompleted ? 'task-text task-completed' : 'task-text'}>
+				{props.taskText}
+			</p>
 			<button
 				className='task-remove-button'
 				onClick={ () => props.removeTask(props.id)}>

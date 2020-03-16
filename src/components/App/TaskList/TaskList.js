@@ -17,7 +17,9 @@ const TaskList = props => {
 						key={taskObject.id}
 						id={taskObject.id}
 						taskText={taskObject.text}
+						taskCompleted={taskObject.completed}
 						removeTask={props.removeTaskFn}
+						completeTask={props.completeTaskFn}
 					/>
 				))}
 			</div>
