@@ -18,7 +18,7 @@ const TaskInput = props => {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className='form'>
 			<input
 				className='form-input-field'
 				type='text'
@@ -29,7 +29,8 @@ const TaskInput = props => {
 			<button
 				className='form-input-button'
 				onClick={handleSubmit}>
-				ADD
+					<span className='material-icons'>add_circle</span>
+				Add
 			</button>
 		</form>
 	)

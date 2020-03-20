@@ -6,17 +6,18 @@ const Task = props => {
 		<div className='task-wrapper'>
 			<input
 				type='checkbox'
+				checked={props.taskCompleted}
 				className='task-checkbox'
 				onChange={() => props.completeTask(props.id)}>
 			</input>
 			<p
 				className={props.taskCompleted ? 'task-text task-completed' : 'task-text'}>
-				{props.taskText}
+					{props.taskText}
 			</p>
 			<button
 				className='task-remove-button'
-				onClick={ () => props.removeTask(props.id)}>
-				X
+				onClick={() => props.removeTask(props.id)}>
+				<span className='material-icons task-remove-icon'>delete</span>
 			</button>
 		</div>
 	)

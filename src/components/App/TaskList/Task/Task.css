@@ -18,14 +18,15 @@
 }
 .task-completed {
 	text-decoration: line-through;
+	font-style: italic;
+	opacity: 0.4;
 }
 .task-remove-button {
-	width: 2.5rem;
-	height: 2.5rem;
-	font-size: 1.5rem;
 	margin: 1rem;
-	background-color: #ca3e47;
-	border: 1px solid #ca3e47;
-	border-radius: 0.3rem;
+	background-color: rgba(0,0,0,0);
+	border: none;
 	cursor: pointer;
+}
+.task-remove-icon {
+	color: #fff;
 }
