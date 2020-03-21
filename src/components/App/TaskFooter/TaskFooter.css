@@ -1,0 +1,42 @@
+.task-footer {
+	display: flex;
+	justify-content: flex-end;
+	margin: auto;
+	width: 40rem;
+}
+
+.remove-completed-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+	height: 3rem;
+	font-size: 1rem;
+	font-family: 'Roboto';
+	margin: 0 1rem;
+	color: rgba(0,0,0,0.85);
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+
+.remove-all-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+	height: 3rem;
+	font-size: 1rem;
+	font-family: 'Roboto';
+	margin: 0;
+	color: #FFFFFF;
+	background-color: #F44336;
+	border: 1px solid #F44336;
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+
+.disabled {
+	cursor: not-allowed;
+}

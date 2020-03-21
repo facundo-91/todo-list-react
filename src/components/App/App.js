@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TaskInput from './TaskInput/TaskInput';
 import TaskList from './TaskList/TaskList';
+import TaskFooter from './TaskFooter/TaskFooter'
 
 const App = () => {
 	// States
@@ -44,6 +45,7 @@ const App = () => {
 				removeTaskFn={removeTask}
 				completeTaskFn={completeTask}
 			/>
+			<TaskFooter taskListArr={tasks} />
     </div>
   )
 }
