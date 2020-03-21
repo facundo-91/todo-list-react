@@ -6,12 +6,14 @@ const TaskFooter = props => {
 		return (
 			<div className='task-footer'>
 				<button
-					className='remove-completed-button'>
+					className='remove-completed-button'
+					onClick={() => props.removeCompletedFn()}>
 						<span className='material-icons'>delete_forever</span>
 						 Clear Completed
 				</button>
 				<button
-					className='remove-all-button'>
+					className='remove-all-button'
+					onClick={() => props.removeAllFn()}>
 						<span className='material-icons'>delete_outline</span>
 						 Clear All
 				</button>

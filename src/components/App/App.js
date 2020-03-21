@@ -36,6 +36,18 @@ const App = () => {
 		setTasks(newTasks)
 	}
 
+	const removeCompleted = () => {
+		// Use filter to return a new array that have only the tasks
+		// with the .completed property False
+		const newTasks = [...tasks].filter(task => task.completed === false);
+		setTasks(newTasks);
+	}
+
+	const removeAll = () => {
+		const newTasks = [];
+		setTasks(newTasks);
+	}
+
   return (
     <div>
 			<h1>TO-DO REACT APP</h1>
@@ -45,7 +57,11 @@ const App = () => {
 				removeTaskFn={removeTask}
 				completeTaskFn={completeTask}
 			/>
-			<TaskFooter taskListArr={tasks} />
+			<TaskFooter
+				taskListArr={tasks}
+				removeCompletedFn={removeCompleted}
+				removeAllFn={removeAll}
+			/>
     </div>
   )
 }
