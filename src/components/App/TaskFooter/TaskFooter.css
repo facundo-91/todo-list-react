@@ -1,22 +1,19 @@
 .task-footer {
 	display: flex;
-	justify-content: flex-end;
-	margin: auto;
-	width: 40rem;
+	flex-flow: column;
 }
 
 .remove-completed-button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 10rem;
 	height: 3rem;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-family: 'Roboto';
-	margin: 0 1rem;
-	color: rgba(0,0,0,0.85);
-	background-color: #FFFFFF;
-	border: 1px solid #FFFFFF;
+	margin: 1rem 0.5rem 0.5rem;
+	color: #FFFFFF;
+	background-color: #303030;
+	border: 1px solid #CCC;
 	border-radius: 0.3rem;
 	cursor: pointer;
 }
@@ -25,11 +22,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 10rem;
 	height: 3rem;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-family: 'Roboto';
-	margin: 0;
+	margin: 0.5rem;
 	color: #FFFFFF;
 	background-color: #F44336;
 	border: 1px solid #F44336;
@@ -39,4 +35,27 @@
 
 .disabled {
 	cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+	.task-footer {
+		margin: 0 1.75rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.task-footer {
+		width: 50rem;
+		flex-direction: row;
+		place-content: flex-end;
+		margin: 1rem auto;
+	}
+	.remove-completed-button {
+		width: 12.5rem;
+		margin: 0 1rem;
+	}
+	.remove-all-button {
+		width: 12.5rem;
+		margin: 0;
+	}
 }

@@ -2,8 +2,21 @@
 	margin: 3rem auto;
 	font-size: 2rem;
 }
+
 .task-list {
-	margin: 2rem auto;
-	max-width: 40rem;
+	margin: 1rem 0.5rem;
 	text-align: left;
+}
+
+@media (min-width: 768px) {
+	.task-list {
+		margin: 1rem 2.125rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.task-list {
+		margin: 1rem auto;
+		max-width: 50rem;
+	}
 }

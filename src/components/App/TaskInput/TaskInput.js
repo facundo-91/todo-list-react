@@ -30,7 +30,6 @@ const TaskInput = props => {
 				className='form-input-button'
 				onClick={handleSubmit}>
 					<span className='material-icons'>add_circle</span>
-				Add
 			</button>
 		</form>
 	)
