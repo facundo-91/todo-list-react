@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TaskInput from './TaskInput/TaskInput';
 import TaskList from './TaskList/TaskList';
-import TaskFooter from './TaskFooter/TaskFooter'
+import TaskFooter from './TaskFooter/TaskFooter';
 
 const App = () => {
 	// States
 	const [ tasks, setTasks ] = useState([]);
+
+	// Effects
+	useEffect(() => {
+		// Get tasks from localstorage if any
+		const data = localStorage.getItem('tasks');
+		if (data) {
+			setTasks(JSON.parse(data))
+		}
+	}, []);
+
+	useEffect(() => {
+		// Save tasks from state to localstorage
+		localStorage.setItem('tasks', JSON.stringify(tasks))
+	});
 
 	// Functions
 	const addTask = text => {
